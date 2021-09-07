@@ -38,7 +38,7 @@ namespace GlobalizationAndLocalization
                     new CultureInfo("es")
                 };
 
-                options.DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture(culture: "en" , uiCulture :"en");
+                options.DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture(culture: "en-US", uiCulture : "en-US");
                 options.SupportedCultures = supportedCultures;
                 options.SupportedUICultures = supportedCultures;
             });
