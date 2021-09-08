@@ -26,7 +26,8 @@ namespace GlobalizationAndLocalization
         {
             services.AddLocalization(options => options.ResourcesPath = "Resources");
             services.AddMvc()
-                .AddViewLocalization(Microsoft.AspNetCore.Mvc.Razor.LanguageViewLocationExpanderFormat.Suffix);
+                .AddViewLocalization(Microsoft.AspNetCore.Mvc.Razor.LanguageViewLocationExpanderFormat.Suffix)
+                .AddDataAnnotationsLocalization();
             services.Configure<RequestLocalizationOptions>(options => 
             {
                 var supportedCultures = new[] 

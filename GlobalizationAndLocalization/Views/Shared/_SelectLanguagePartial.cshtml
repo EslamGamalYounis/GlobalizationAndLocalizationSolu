@@ -12,7 +12,7 @@
     var requestCulture = Context.Features.Get<IRequestCultureFeature>();
 
     var culutreItems = locOptions.Value.SupportedCultures
-        .Select(c => new SelectListItem { Value = c.Name, Text = c.DisplayName })
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.NativeName })
         .ToList();
 
     var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"{Context.Request.Path.Value}";

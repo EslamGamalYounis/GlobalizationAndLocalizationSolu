@@ -1,0 +1,14 @@
+﻿@model CreateTestViewModel
+
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
+
+<form method="post" asp-action="Create">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">
+        @localizer["Save"]
+    </button>
+</form>
